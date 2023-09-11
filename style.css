@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;400&family=Montserrat:wght@100;200;400;700&family=Open+Sans:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;400&family=Montserrat:wght@100;200;400&family=Open+Sans:wght@300;400&display=swap');
+
+:root{
+    --branco-primaria: #FFFFFF;
+    --cinza-secundaria: #C0C0C0  ;
+    --cor--fundo: black;
+    --cor--terciaria:#c835d9 ; 
+    --font--principal: 'Monteserrat', sans-serif;
+    --font--secundaria: 'Inter', sans-serif;
+    --botao--cor:#cc56da ;   
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: var(--cor--fundo);
+    color: var(--branco-primaria);
+    font-family: var(--font--principal);
+    font-weight: 100;
+    font-size: 16px;
+}
+
+.navbar__text{
+    color: var(--branco-primaria);
+    text-decoration: none;
+    font-family: var(--font--principal);
+    font-weight: 700;
+    letter-spacing: 0.5px ;
+}
+.navbar__text:hover{
+    color:var(--cor--terciaria);
+    font-size: 18px;
+}
+
+.container__navbar {  
+    position: fixed;  
+    top: 0;
+    left: 0;
+    width: 100%; 
+    padding: 2% 0% 0% 3%  ;      
+    /*background-color: var(--cor--fundo);*/
+}
+
+.container__navbar.rolagem{ /* Efeito de rolagem da pagina, navbar ficar com o backgroud de outra cor. */
+    background-color: #030303da;
+    border-bottom: 1px solid var(--branco-primaria);
+    box-shadow: 1px 1px 2px 5px rgba(250, 250, 250, 0.137);
+    z-index: 2;
+}
+
+.navbar__conteudo{
+    display: flex;
+    flex-direction: row;
+    gap: 80px;
+    align-items: center;
+}
+
+.apresentacao{  /* Configurando o background-image. */
+     background-image: url("assets/background.png");
+     background-repeat: no-repeat; /* sem repetição do background*/
+     background-size: contain; /* Editando o tamanho dele para o oculpar todo o container.*/
+     background-position-y: 80%;
+     text-align: center;
+     align-items: center;
+     width: 100%;
+}
+
+.container{
+    height: 100vh; /* definindo o tamanho do container para  toda a tela. */
+    display: grid; /* Separa cada elemento*/
+    grid-template-columns: 50% 50%; /* Separa os elemntos da tela um embaixo do outro ou um ao lado do outro, aqui ele está ocupando só o espaço dele*/
+    padding: 6% 30% 0% 1%;    
+    width: 100%;
+}
+
+.container__titulo{
+    font-family: var(--font--principal);
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.container__botao{
+    background-color: var(--cor--terciaria);
+    border-radius: 8px;
+    padding: 1em;
+    text-decoration: none;
+    color: var(--branco-primaria);
+    display: block;
+    font-family: var(--font--secundaria);
+    font-weight: 400;
+    margin: 2em;
+}
+.container__botao:hover{
+    background-color: var(--botao--cor);
+}
+
+.botao__secundario{
+    background-color: transparent;
+    border: 1.5px solid var(--branco-primaria);
+}
+
+.container__aviso{
+    font-family: var(--font--secundaria);
+    font-weight: 200;
+    font-size: 12px;
+    color: var(--cinza-secundaria);
+    margin-left: 60px;
+}
+
+/* INICIO DA SEGUNDA SEÇÃO*/
+
+.container_apresentacao2{
+    display: flex;
+    flex-direction: column;
+    text-align: center;    
+}
+
+h1.apresentacao2__titulo{
+    margin-top: 4rem;
+    font-family: var(--font--principal);
+    font-weight: 700;
+    font-size: 45px;    
+    letter-spacing: 0.5px ;    
+    border-bottom: 2px ;
+}
+
+.card_noticias{
+    display: flex;    
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 6rem;
+    padding: 0% 3% 0% 3%  ;        
+}
+
+.video_fundo{
+    position: absolute;
+    z-index: -2;  
+    width: 100%;  
+}
+
+.card_noticias{
+    z-index: 1;
+}
+.card-img-top{
+    width: 100%;
+}
+
+.card-body{
+    background-color: #C0C0C0;
+    box-shadow: 0 5px 10px 0px black;
+    
+}
+
+.btn-primary{
+    background-color:#bc0b0b;
+    color: var(--branco-primaria);
+    font-family: var(--font--secundaria);
+    border: none;
+}
+
+.btn-primary:hover{
+    background-color: #ce3030;
+}
+
+.rodape{    
+    margin-top: 9%;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;   
+    align-items: center;
+    text-align: center; 
+    
+    
+}
+.rodape__logo{ 
+    width: 200px;   
+}
+
+.rodape__listas{
+    display: flex;
+    gap: 100px;    
+}
+
+.rodape__link{
+  font-family: var(--font--secundaria);
+  color: var(--cinza-secundaria);
+  font-weight: 700;
+  list-style: none;
+  color: var(--branco-primaria);
+ 
+}
+
+.rodape__texto{   
+    padding: 0.3% 15% ;
+    font-family:var(--font--secundaria) ;
+    font-weight: 400;
+    color: var(--branco-primaria);
+}
+
+.ancora{
+    text-decoration: none;
+    color: var(--branco-primaria);
+}
+
+.ancora:hover{
+    color: var(--cor--terciaria);
+}
